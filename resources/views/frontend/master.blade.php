@@ -1,0 +1,8 @@
+@include('frontend.component.head')
+@include('frontend.component.menu')
+@include('frontend.component.slider')
+@include('frontend.component.categories')
+@include('frontend.component.banner')
+@include('frontend.home.index')
+@include('frontend.component.feeature')
+@include('frontend.component.footer')

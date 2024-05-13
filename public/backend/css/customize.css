@@ -1,0 +1,108 @@
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 50x;
+  font-style: italic;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animated-image {
+  width: 100%;
+  /* Đảm bảo ảnh điều chỉnh kích thước theo chiều rộng của container */
+  max-width: 400px;
+  /* Giới hạn chiều rộng tối đa của ảnh (thay đổi theo nhu cầu) */
+  display: block;
+  /* Tránh khoảng trắng dư thừa dưới ảnh khi sử dụng thuộc tính inline-block */
+  margin: 0 auto;
+  /* Canh giữa ảnh theo chiều ngang */
+  border-radius: 8px;
+  /* Bo tròn góc cho ảnh */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Đổ bóng cho ảnh */
+}
+
+.font-bold {
+  text-align: center;
+  font-weight: bold;
+  /* Đặt độ đậm của chữ */
+  font-family: 'Your Font', sans-serif;
+  /* Thay 'Your Font' bằng tên font bạn muốn sử dụng */
+  font-size: 20px;
+  /* Đặt kích thước chữ */
+  color: #1ab394;
+  /* Đặt màu chữ */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Đổ bóng chữ */
+  transition: color 0.3s ease-in-out;
+  /* Hiệu ứng màu khi đưa chuột qua */
+  cursor: pointer;
+  /* Thêm hiệu ứng con trỏ khi di chuột qua */
+}
+
+/* Hiệu ứng khi đưa chuột qua */
+.font-bold:hover {
+  color: #e74c3c;
+  /* Màu chữ thay đổi khi đưa chuột qua */
+
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+table strong {
+  min-width: 88px;
+}
+
+.uk-flex-middle {
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.uk-flex-space-between {
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.uk-flex{
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.filter{
+  margin-bottom: 20px;
+}
+.filter .perpage{
+  display: inline-block;
+}
+.btn{
+  height: 32px;
+  border-radius: 13px;
+font-size: 13px;
+margin-bottom: 0px;
+}
+.filter .form-control{
+  height: 32px;
+  max-width: 200px;
+  font-size: 13px;
+}
+.mr10{
+  margin-right: 10px;
+}
+.mr5{
+  margin-right: 5px;
+}
