@@ -30,6 +30,10 @@ public function product($id){
         compact('product', 'refProducts')
     );
 }
+public function shop(){
+    $products = Products::paginate(15);
+    return view("frontend.shop.shop", compact('products'));
+}
 
 
 }

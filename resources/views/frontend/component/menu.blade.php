@@ -14,7 +14,7 @@
                             <a href="demo3.html">TRANG CHỦ</a>
                         </li>
                         <li>
-                            <a href="demo3-product.html">SẢN PHẨM</a>
+                            <a href="{{route('shop.shop')}}">SẢN PHẨM</a>
                             <div class="megamenu megamenu-fixed-width megamenu-3cols">
                                 <div class="row">
                                     <div class="col-lg-4">

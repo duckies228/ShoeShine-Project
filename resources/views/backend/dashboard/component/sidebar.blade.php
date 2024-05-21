@@ -29,7 +29,7 @@
                     <li class="active"><a href="dashboard_2.html">Quản Lý Đơn Hàng</a></li>
                     <li><a href="dashboard_3.html">Quản Lý Khách Hàng</a></li>
                     <li><a href="{{ route('user.index') }}">Quản Lý Nhân Viên</a></li>
-                    <li><a href="dashboard_4_1.html">Quản Lý Kho Hàng</a></li>
+                    <li><a href="{{route('home.index')}}">Quay lại trang chủ</a></li>
                 </ul>
             </li>
             <li>

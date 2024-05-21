@@ -39,6 +39,7 @@ Route::prefix('customer')->group(function () {
     Route::get('/cart', [CustomerController::class, 'cart'])->name('cart.cart');
     Route::get('/products/{id}', [CustomerController::class, 'product'])->name('product.productsdetail');
     Route::get('/checkout', [CustomerController::class, 'checkout'])->name('cart.checkout');
+    Route::get('/shop', [CustomerController::class, 'shop'])->name('shop.shop');
 
 
 });

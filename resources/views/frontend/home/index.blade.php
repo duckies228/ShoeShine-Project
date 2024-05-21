@@ -5,12 +5,12 @@
                 <h2 class="section-title ls-n-15 text-center pb-2 m-b-4">SẢN PHẨM NỔI BẬT</h2>
                 <div class="row py-4">
                     @if (isset($products))
-                    @foreach ($products as $product)
-                    <div class="col-6 col-sm-4 col-md-3 col-xl-2 appear-animate" data-animation-name="fadeIn"
-                        data-animation-delay="300" data-animation-duration="1000">
-                        <div class="product-default inner-quickview inner-icon">
+                        @foreach ($products as $product)
+                            <div class="col-6 col-sm-4 col-md-3 col-xl-2 appear-animate" data-animation-name="fadeIn"
+                                data-animation-delay="300" data-animation-duration="1000">
+                                <div class="product-default inner-quickview inner-icon">
                                     <figure>
-                                        <a href="{{route('product.productsdetail', ['id' => $product->id])}}">
+                                        <a href="{{ route('product.productsdetail', ['id' => $product->id]) }}">
                                             <img src="{{ $product->images }}"alt="">
                                         </a>
                                         <div class="label-group">
@@ -42,12 +42,21 @@
                                         </div>
                                     </div>
                                 </div>
-                          
-                    </div>
-                 
-                    @endforeach
+
+                            </div>
+                   
+                        @endforeach
                     @endif
-                    <div class="pagination" >
+                    {{-- <div class="pagination">
+                        <a href="#">&laquo;</a>
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">&raquo;</a>
+                    </div> --}}
+                    <div class="pagination">
                         {{ $products->links() }}
                     </div>
                 </div>
