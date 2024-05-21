@@ -34,6 +34,10 @@ public function shop(){
     $products = Products::paginate(15);
     return view("frontend.shop.shop", compact('products'));
 }
-
-
+public function blog(){
+    return view("frontend.blog.blog");
+}
+public function contact(){
+    return view("frontend.contact.contact");
+}
 }

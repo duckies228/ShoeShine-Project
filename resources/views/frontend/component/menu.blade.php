@@ -5,13 +5,13 @@
                 <button class="mobile-menu-toggler" type="button">
                     <i class="fas fa-bars"></i>
                 </button>
-                <a href="demo3.html" class="logo">
+                <a href="{{route('home.index')}}" class="logo">
                     <img src="assets/images/shoeshine.png" alt=" Logo">
                 </a>
                 <nav class="main-nav font2">
                     <ul class="menu">
                         <li class="active">
-                            <a href="demo3.html">TRANG CHỦ</a>
+                            <a href="{{route('home.index')}}">TRANG CHỦ</a>
                         </li>
                         <li>
                             <a href="{{route('shop.shop')}}">SẢN PHẨM</a>
@@ -48,7 +48,7 @@
                                                     <b class="">50%</b>
                                                 </h4>
                                             </div>
-                                            <a href="demo3-shop.html" class="btn btn-sm btn-dark">MUA NGAY</a>
+                                            <a href="###" class="btn btn-sm btn-dark">MUA NGAY</a>
                                         </div>
                                     </div><!-- End .col-lg-4 -->
                                 </div><!-- End .row -->
@@ -57,22 +57,22 @@
                         <li>
                             <a href="#">PHỤ KIỆN</a>
                             <ul>
-                                <li><a href="wishlist.html">Dây Giày</a></li>
-                                <li><a href="cart.html">Tất và Lót Giày</a></li>
-                                <li><a href="checkout.html">Túi và Hộp Đựng Giày</a></li>
-                                <li><a href="dashboard.html">Keo dán giày</a></li>
-                                <li><a href="demo3-about.html">Insoles và lót đệm</a></li>
+                                <li><a href="##">Dây Giày</a></li>
+                                <li><a href="##">Tất và Lót Giày</a></li>
+                                <li><a href="##">Túi và Hộp Đựng Giày</a></li>
+                                <li><a href="##">Keo dán giày</a></li>
+                                <li><a href="##">Insoles và lót đệm</a></li>
                                 <li><a href="#">Sản Phẩm Phục Hồi và Sửa Chữa</a>
                                     <ul>
-                                        <li><a href="blog.html">Đế giày và mũi giày thay thế</a></li>
-                                        <li><a href="single.html">Dây kéo và phụ kiện sửa chữa</a></li>
+                                        <li><a href="#">Đế giày và mũi giày thay thế</a></li>
+                                        <li><a href="#">Dây kéo và phụ kiện sửa chữa</a></li>
                                     </ul>
                                 </li>
 
                             </ul>
                         </li>
-                        <li><a href="blog.html">Tin Tức</a></li>
-                        <li><a href="contact.html">Liên Hệ</a>
+                        <li><a href="{{route('blog.blog')}}">Tin Tức</a></li>
+                        <li><a href="{{route('contact.contact')}}">Liên Hệ</a>
                         </li>
                     </ul>
                 </nav>

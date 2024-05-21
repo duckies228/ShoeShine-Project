@@ -40,6 +40,9 @@ Route::prefix('customer')->group(function () {
     Route::get('/products/{id}', [CustomerController::class, 'product'])->name('product.productsdetail');
     Route::get('/checkout', [CustomerController::class, 'checkout'])->name('cart.checkout');
     Route::get('/shop', [CustomerController::class, 'shop'])->name('shop.shop');
+    Route::get('/blog', [CustomerController::class, 'blog'])->name('blog.blog');
+    Route::get('/contact', [CustomerController::class, 'contact'])->name('contact.contact');
+
 
 
 });

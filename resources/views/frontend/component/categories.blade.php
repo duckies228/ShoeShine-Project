@@ -15,11 +15,11 @@
             </a>
         </div>
         <div class="product-category">
-            <a href="demo3-shop.html">
+            <a href="#">
                 <figure>
                     <img src="assets/images/demoes/categories/category-2.jpg" width="273" height="273"
                         alt="category" />
-                </figure>
+        #        </figure>
                 <div class="category-content">
                     <h3>Sport</h3>
                     <span><mark class="count">4</mark> products</span>
@@ -27,7 +27,7 @@
             </a>
         </div>
         <div class="product-category">
-            <a href="demo3-shop.html">
+            <a href="#">
                 <figure>
                     <img src="assets/images/demoes/categories/category-3.jpg" width="273" height="273"
                         alt="category" />
@@ -39,7 +39,7 @@
             </a>
         </div>
         <div class="product-category">
-            <a href="demo3-shop.html">
+            <a href="#">
                 <figure>
                     <img src="assets/images/demoes/categories/category-4.jpg" width="273" height="273"
                         alt="category" />
@@ -51,7 +51,7 @@
             </a>
         </div>
         <div class="product-category">
-            <a href="demo3-shop.html">
+            <a href="#">
                 <figure>
                     <img src="assets/images/demoes/categories/category-5.jpg" width="273" height="273"
                         alt="category" />
@@ -63,7 +63,7 @@
             </a>
         </div>
         <div class="product-category">
-            <a href="demo3-shop.html">
+            <a href="#">
                 <figure>
                     <img src="assets/images/demoes/categories/category-6.jpg" width="273" height="273"
                         alt="category" />

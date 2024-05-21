@@ -6,8 +6,7 @@
                 <div class="row py-4">
                     @if (isset($products))
                         @foreach ($products as $product)
-                            <div class="col-6 col-sm-4 col-md-3 col-xl-2 appear-animate" data-animation-name="fadeIn"
-                                data-animation-delay="300" data-animation-duration="1000">
+                            <div class="col-6 col-sm-4 col-md-3 col-xl-2 appear-animate" >
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="{{ route('product.productsdetail', ['id' => $product->id]) }}">
@@ -18,7 +17,7 @@
                                             <div class="product-label label-sale">-20%</div>
                                         </div>
                                         <div class="btn-icon-group">
-                                            <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
+                                            <a href="{{route('cart.cart')}}" class="btn-icon "><i
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                     </figure>

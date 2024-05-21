@@ -5,8 +5,9 @@
                 <button class="mobile-menu-toggler text-primary mr-2" type="button">
                     <i class="fas fa-bars"></i>
                 </button>
-                <a href="{{route('home.index')}}" class="logo">
-                    <img src="{{ asset('assets') }}/images/shoeshine.png" width="111" height="44" alt="Porto Logo">
+                <a href="{{ route('home.index') }}" class="logo">
+                    <img src="{{ asset('assets') }}/images/shoeshine.png" width="111" height="44"
+                        alt="Porto Logo">
                 </a>
             </div>
             <div class="header-right w-lg-max">
@@ -17,13 +18,13 @@
                         <div class="header-search-wrapper">
                             <input type="search" class="form-control" name="q" id="q"
                                 placeholder="Search..." required>
-                      
+
                             <button class="btn icon-magnifier p-0" type="submit"></button>
                         </div><!-- End .header-search-wrapper -->
                     </form>
                 </div>
 
-         
+
 
                 <a href="login.html" class="header-icon" title="login"><i class="icon-user-2"></i></a>
 
@@ -54,10 +55,14 @@
                 <nav class="main-nav font2">
                     <ul class="menu">
                         <li class="active">
-                            <a href="demo3.html">TRANG CHỦ</a>
+                            <a href="{{ route('home.index') }}">TRANG CHỦ</a>
                         </li>
                         <li>
-                            <a href="demo3-product.html">SẢN PHẨM</a>
+                            @if (isset($product ))
+                               
+                                    <a href="{{ route('product.productsdetail', ['id' => $product->id]) }}">SẢN PHẨM</a>
+                              
+                            @endif
                             <div class="megamenu megamenu-fixed-width megamenu-3cols">
                                 <div class="row">
                                     <div class="col-lg-4">
@@ -91,7 +96,7 @@
                                                     <b class="">50%</b>
                                                 </h4>
                                             </div>
-                                            <a href="demo3-shop.html" class="btn btn-sm btn-dark">MUA NGAY</a>
+                                            <a href="#" class="btn btn-sm btn-dark">MUA NGAY</a>
                                         </div>
                                     </div><!-- End .col-lg-4 -->
                                 </div><!-- End .row -->
@@ -99,23 +104,23 @@
                         </li>
                         <li>
                             <a href="#">PHỤ KIỆN</a>
-                            <ul>
-                                <li><a href="wishlist.html">Dây Giày</a></li>
-                                <li><a href="cart.html">Tất và Lót Giày</a></li>
-                                <li><a href="checkout.html">Túi và Hộp Đựng Giày</a></li>
-                                <li><a href="dashboard.html">Keo dán giày</a></li>
-                                <li><a href="demo3-about.html">Insoles và lót đệm</a></li>
+                            <ul>#
+                                <li><a href="#">Dây Giày</a></li>
+                                <li><a href="#">Tất và Lót Giày</a></li>
+                                <li><a href="#">Túi và Hộp Đựng Giày</a></li>
+                                <li><a href="#">Keo dán giày</a></li>
+                                <li><a href="#">Insoles và lót đệm</a></li>
                                 <li><a href="#">Sản Phẩm Phục Hồi và Sửa Chữa</a>
                                     <ul>
-                                        <li><a href="blog.html">Đế giày và mũi giày thay thế</a></li>
-                                        <li><a href="single.html">Dây kéo và phụ kiện sửa chữa</a></li>
+                                        <li><a href="#">Đế giày và mũi giày thay thế</a></li>
+                                        <li><a href="#">Dây kéo và phụ kiện sửa chữa</a></li>
                                     </ul>
                                 </li>
 
                             </ul>
                         </li>
-                        <li><a href="blog.html">Tin Tức</a></li>
-                        <li><a href="contact.html">Liên Hệ</a>
+                        <li><a href="{{route('blog.blog')}}">Tin Tức</a></li>
+                        <li><a href="#">Liên Hệ</a>
                         </li>
                     </ul>
                 </nav>

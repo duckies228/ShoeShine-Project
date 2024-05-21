@@ -108,7 +108,7 @@
                                 <div class="product-single-qty">
                                     <input class="horizontal-quantity form-control" type="text">
                                 </div><!-- End .product-single-qty -->
-                                <a href="javascript:;" class="btn btn-dark add-cart mr-2" title="Add to Cart">Mua
+                                <a href="{{route('cart.cart')}}" class="btn btn-dark add-cart mr-2" title="Add to Cart">Mua
                                     Ngay</a>
                             </div><!-- End .product-action -->
 
@@ -221,7 +221,6 @@
         <h2 class="section-title ls-n-15 text-center pb-2 m-b-4">SẢN PHẨM LIÊN QUAN</h2>
         <div class="row py-4 justify-content-center">
             @if (isset($refProducts))
-
                 <div class="products-section pt-0">
                     <div class="row">
                         @foreach ($refProducts as $product)
@@ -259,9 +258,8 @@
                                         <!-- End .price-box -->
                                         <div class="product-action">
                                           
-                                            <a href="product.html" class="btn-icon btn-add-cart"><i
-                                                    class="fa fa-arrow-right"></i><span>Mua Ngay</span></a>
-                                            
+                                            <a href="{{route('cart.cart')}}" class="btn-icon btn-add-cart"><i
+                                                    class="fa fa-arrow-right"></i><span>Mua Ngay</span></a>                                     
                                         </div>
                                     </div>
                                     <!-- End .product-details -->
