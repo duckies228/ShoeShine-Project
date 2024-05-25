@@ -106,7 +106,7 @@
                         <i class="icon-cart-thick"></i>
                         <span class="cart-count badge-circle">3</span>
                     </a> --}}
-                    <a href="{{ route('cart.cart') }}" class="dropdown-toggle  cart-toggle" title="Wishlist"> <i
+                    <a href="{{ route('cart.index') }}" class="dropdown-toggle  cart-toggle" title="Wishlist"> <i
                             class="icon-cart-thick"></i>
                     </a>
                 </div>

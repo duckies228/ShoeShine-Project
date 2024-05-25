@@ -36,21 +36,17 @@
                                     <span class="tooltiptext tooltip-top"></span>
                                 </div><!-- End .product-ratings -->
 
-                                <a href="#" class="rating-link">( 6 Reviews )</a>
+                     
                             </div><!-- End .ratings-container -->
 
                             <hr class="short-divider">
 
                             <div class="price-box">
                                 {{-- <span class="product-price">$199.00 - </span> --}}
-                                <span class="product-price">${{ $product->price ? $product->price : '' }}</span>
+                                <span class="product-price">{{ $product->price ? number_format($product->price) . ' VNĐ' : '' }}</span>
                             </div><!-- End .price-box -->
 
-                            <div class="product-desc">
-                                <p>
-                                    {{ $product->description ? $product->description : '' }}
-                                </p>
-                            </div><!-- End .product-desc -->
+                            
 
                             <ul class="single-info-list">
                                 <!---->
@@ -90,12 +86,8 @@
                                                 class="d-flex align-items-center justify-content-center">
                                                 {{ $product->size ? $product->size : '' }}</a>
                                         </li>
-                                        <li class=""><a href="javascript:;"
-                                                class="d-flex align-items-center justify-content-center">{{ $product->size ? $product->size : '' }}</a>
-                                        </li>
-                                        <li class=""><a href="javascript:;"
-                                                class="d-flex align-items-center justify-content-center">{{ $product->size ? $product->size : '' }}</a>
-                                        </li>
+                                
+                                       
                                     </ul>
                                 </div>
 
@@ -108,7 +100,7 @@
                                 <div class="product-single-qty">
                                     <input class="horizontal-quantity form-control" type="text">
                                 </div><!-- End .product-single-qty -->
-                                <a href="{{route('cart.cart')}}" class="btn btn-dark add-cart mr-2" title="Add to Cart">Mua
+                                <a href="{{route('cart.index')}}" class="btn btn-dark add-cart mr-2" title="Add to Cart">Mua
                                     Ngay</a>
                             </div><!-- End .product-action -->
 
@@ -136,14 +128,14 @@
                         <div class="tab-pane fade show active" id="product-desc-content" role="tabpanel"
                             aria-labelledby="product-tab-desc">
                             <div class="product-desc-content">
-                                {{ $product->description ? $product->description : '' }}
+                                {{ $product->description}}
                             </div>
                         </div>
                         <div class="tab-pane fade" id="product-reviews-content" role="tabpanel"
                             aria-labelledby="product-tab-reviews">
                             <div class="product-reviews-content">
                                 {{ $product->reviews ? $product->reviews : '' }}
-                                <h3 class="reviews-title">1 review for {{ $product->name ? $product->name : '' }} </h3>
+                                <h3 class="reviews-title">{{ $product->name ? $product->name : '' }} </h3>
 
                                     
 
@@ -227,7 +219,7 @@
                             <div class="col-md-3">
                                 <div class="product-default">
                                     <figure>
-                                        <a href="product.html">
+                                        <a href="{{ route('product.productsdetail', ['id' => $product->id]) }}">
                                             <img src="{{ asset($product->images) }}" alt="">
                                         </a>
                                         <div class="label-group">
@@ -237,7 +229,7 @@
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-list">
-                                            <a href="category.html" class="product-category">Category</a>
+                                            <a href="#" class="product-category">{{$product->categories}}</a>
                                         </div>
                                         <h3 class="product-title">
                                             <a href="">{{ $product->name }}</a>
@@ -252,13 +244,12 @@
                                         </div>
                                         <!-- End .product-container -->
                                         <div class="price-box">
-                                            <del class="old-price">$59.00</del>
-                                            <a href="">{{ $product->price }}</a>
+                                            <span class="product-price">{{ $product->price ? number_format($product->price) . ' VNĐ' : '' }}</span>
                                         </div>
                                         <!-- End .price-box -->
                                         <div class="product-action">
                                           
-                                            <a href="{{route('cart.cart')}}" class="btn-icon btn-add-cart"><i
+                                            <a href="{{route('cart.index')}}" class="btn-icon btn-add-cart"><i
                                                     class="fa fa-arrow-right"></i><span>Mua Ngay</span></a>                                     
                                         </div>
                                     </div>

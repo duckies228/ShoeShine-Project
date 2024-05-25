@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Customer;
 
 use App\Http\Controllers\Controller;
 use App\Models\Products;
+use App\Models\Categories;
 use Illuminate\Http\Request;
+use PhpOffice\PhpSpreadsheet\Calculation\Category;
 
 class CustomerController extends Controller
 {
@@ -40,4 +42,10 @@ public function blog(){
 public function contact(){
     return view("frontend.contact.contact");
 }
+// public function showCategory($categoryId) {
+//     $category = Category::findOrFail($categoryId);
+//     $productCount = $category->products()->count();
+//     return view('category', compact('category', 'productCount'));
+// }
+
 }

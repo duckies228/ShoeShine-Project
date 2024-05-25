@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\backend\AuthController;
 use App\Http\Controllers\backend\DashboardController;
 use App\Http\Controllers\Customer\CustomerController;
+use App\Http\Controllers\Cart\CartController;
 use App\Http\Middleware\AuthenticateMiddleware;
 use App\Http\Middleware\Loginmiddleware;
 use App\Http\Controllers\User\Usercontroller;
@@ -43,6 +44,10 @@ Route::prefix('customer')->group(function () {
     Route::get('/blog', [CustomerController::class, 'blog'])->name('blog.blog');
     Route::get('/contact', [CustomerController::class, 'contact'])->name('contact.contact');
 
+//Cart
+Route::prefix('cart')->group(function () {
+    Route::get('/', [CartController::class, 'index'])->name('cart.index');
+    route::get('/add',[CartController::class ,'add'])->name('cart.add');
 
-
+});
 });

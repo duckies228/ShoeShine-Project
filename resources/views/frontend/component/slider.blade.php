@@ -8,8 +8,8 @@
             <h4 class="m-b-4">CONVERSE</h4>
 
             <h5 class="text-uppercase">Starting at<span
-                    class="coupon-sale-text"><sup>$</sup>900<sup>000</sup></span></h5>
-            <a href="demo3-shop.html" class="btn btn-dark btn-xl" role="button">Mua Ngay</a>
+                    class="coupon-sale-text"><sup></sup>200<sup>000.VNĐ</sup></span></h5>
+            <a href="{{route('shop.shop')}}" class="btn btn-dark btn-xl" role="button">Mua Ngay</a>
         </div><!-- End .banner-layer -->
     </div><!-- End .home-slide -->
 
@@ -22,9 +22,9 @@
 
             <hr class="short-thick-divider mb-sm-0 mb-1">
 
-            <h5 class="text-uppercase d-inline-block mb-2 mb-sm-0">Starting at <span>$<em>700</em>000</span>
+            <h5 class="text-uppercase d-inline-block mb-2 mb-sm-0">Starting at <span><em>100</em>000.VNĐ</span>
             </h5>
-            <a href="demo3-shop.html" class="btn btn-dark btn-xl btn-icon-right" role="button">Mua Ngay <i
+            <a href="{{route('shop.shop')}}" class="btn btn-dark btn-xl btn-icon-right" role="button">Mua Ngay <i
                     class="fas fa-long-arrow-alt-right"></i></a>
         </div><!-- End .banner-layer -->
     </div><!-- End .home-slide -->

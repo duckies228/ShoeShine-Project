@@ -57,7 +57,7 @@
                                             <div class="product-label label-sale">-20%</div>
                                         </div>
                                         <div class="btn-icon-group">
-                                            <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
+                                            <a href="{{route('cart.index')}}" class="btn-icon btn-add-cart product-type-simple"><i
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                      
@@ -80,7 +80,7 @@
                                         </div><!-- End .product-container -->
                                         <div class="price-box">
                                          
-                                            <span class="product-price">{{$product->price}}</span>
+                                            <span class="product-price">{{$product->price ? number_Format($product->price) .'VNĐ':''}}</span>
                                         </div><!-- End .price-box -->
                                     </div>
                                 </div>

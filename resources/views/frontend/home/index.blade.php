@@ -17,14 +17,18 @@
                                             <div class="product-label label-sale">-20%</div>
                                         </div>
                                         <div class="btn-icon-group">
-                                            <a href="{{route('cart.cart')}}" class="btn-icon "><i
+                                            <a href="{{route('cart.index')}}" class="btn-icon "><i
                                                     class="icon-shopping-cart"></i></a>
+                                                    
                                         </div>
+                                        <a href="{{ route('product.productsdetail', ['id' => $product->id]) }}" class='btn-quickview bg-primary'>Xem Ngay</a>
+
+
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
                                             <div class="category-list">
-                                                <a href="demo3-shop.html" class="product-category">category</a>
+                                                <a href="#" class="product-category">{{$product->categories}}</a>
                                             </div>
                                         </div>
                                         <h3 class="product-title">
@@ -37,8 +41,8 @@
                                             </div>
                                         </div>
                                         <div class="price-box">
-                                            <a href="">{{ $product->price }}</a>
-                                        </div>
+                                            <span class="product-price">{{ $product->price ? number_format($product->price) . ' VNĐ' : '' }}</span>
+                                            </div>
                                     </div>
                                 </div>
 

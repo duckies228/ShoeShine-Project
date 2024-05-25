@@ -15,6 +15,7 @@
         </ul>
 
         <div class="row">
+
             <div class="col-lg-8">
                 <div class="cart-table-container">
                     <table class="table table-cart">
@@ -28,83 +29,86 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="product-row">
-                                <td>
-                                    <figure class="product-image-container">
-                                        <a href="product.html" class="product-image">
-                                            <img src="{{ asset('assets') }}/images/products/product-4.jpg"
-                                                alt="product">
-                                        </a>
+                            @if (isset($products))
+                            @foreach ($products as $items)
+                                <tr class="product-row">
+                                    <td>
+                                        <figure class="product-image-container">
+                                            <a href="product.html" class="product-image">
+                                                <img src="{{asset($items->images)}}"
+                                                    alt="product">
+                                            </a>
 
-                                        <a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
-                                    </figure>
-                                </td>
-                                <td class="product-col">
-                                    <h5 class="product-title">
-                                        <a href="product.html">Men Watch</a>
-                                    </h5>
-                                </td>
-                                <td>$17.90</td>
-                                <td>
-                                    <div class="product-single-qty">
-                                        <input class="horizontal-quantity form-control" type="text">
-                                    </div><!-- End .product-single-qty -->
-                                </td>
-                                <td class="text-right"><span class="subtotal-price">$17.90</span></td>
-                            </tr>
+                                            <a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
+                                        </figure>
+                                    </td>
+                                    <td class="product-col">
+                                        <h5 class="product-title">
+                                            <a href="product.html">Men Watch</a>
+                                        </h5>
+                                    </td>
+                                    <td>{{$items->price}}</td>
+                                    <td>
+                                        <div class="product-single-qty">
+                                            <input class="horizontal-quantity form-control" type="text">
+                                        </div><!-- End .product-single-qty -->
+                                    </td>
+                                    <td class="text-right"><span class="subtotal-price">$17.90</span></td>
+                                </tr>
 
-                            <tr class="product-row">
-                                <td>
-                                    <figure class="product-image-container">
-                                        <a href="product.html" class="product-image">
-                                            <img src="{{ asset('assets') }}/images/products/product-3.jpg"
-                                                alt="product">
-                                        </a>
+                                <tr class="product-row">
+                                    <td>
+                                        <figure class="product-image-container">
+                                            <a href="product.html" class="product-image">
+                                                <img src="{{ asset('assets') }}/images/products/product-3.jpg"
+                                                    alt="product">
+                                            </a>
 
-                                        <a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
-                                    </figure>
-                                </td>
-                                <td class="product-col">
-                                    <h5 class="product-title">
-                                        <a href="product.html">Men Watch</a>
-                                    </h5>
-                                </td>
-                                <td>$17.90</td>
-                                <td>
-                                    <div class="product-single-qty">
-                                        <input class="horizontal-quantity form-control" type="text">
-                                    </div><!-- End .product-single-qty -->
-                                </td>
-                                <td class="text-right"><span class="subtotal-price">$17.90</span></td>
-                            </tr>
+                                            <a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
+                                        </figure>
+                                    </td>
+                                    <td class="product-col">
+                                        <h5 class="product-title">
+                                            <a href="product.html">Men Watch</a>
+                                        </h5>
+                                    </td>
+                                    <td>$17.90</td>
+                                    <td>
+                                        <div class="product-single-qty">
+                                            <input class="horizontal-quantity form-control" type="text">
+                                        </div><!-- End .product-single-qty -->
+                                    </td>
+                                    <td class="text-right"><span class="subtotal-price">$17.90</span></td>
+                                </tr>
 
-                            <tr class="product-row">
-                                <td>
-                                    <figure class="product-image-container">
-                                        <a href="product.html" class="product-image">
-                                            <img src="{{ asset('assets') }}/images/products/product-6.jpg"
-                                                alt="product">
-                                        </a>
+                                <tr class="product-row">
+                                    <td>
+                                        <figure class="product-image-container">
+                                            <a href="product.html" class="product-image">
+                                                <img src="{{ asset('assets') }}/images/products/product-6.jpg"
+                                                    alt="product">
+                                            </a>
 
-                                        <a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
-                                    </figure>
-                                </td>
-                                <td class="product-col">
-                                    <h5 class="product-title">
-                                        <a href="product.html">Men Black Gentle Belt</a>
-                                    </h5>
-                                </td>
-                                <td>$17.90</td>
-                                <td>
-                                    <div class="product-single-qty">
-                                        <input class="horizontal-quantity form-control" type="text">
-                                    </div><!-- End .product-single-qty -->
-                                </td>
-                                <td class="text-right"><span class="subtotal-price">$17.90</span></td>
-                            </tr>
+                                            <a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
+                                        </figure>
+                                    </td>
+                                    <td class="product-col">
+                                        <h5 class="product-title">
+                                            <a href="product.html">Men Black Gentle Belt</a>
+                                        </h5>
+                                    </td>
+                                    <td>$17.90</td>
+                                    <td>
+                                        <div class="product-single-qty">
+                                            <input class="horizontal-quantity form-control" type="text">
+                                        </div><!-- End .product-single-qty -->
+                                    </td>
+                                    <td class="text-right"><span class="subtotal-price">$17.90</span></td>
+                                </tr>
+                            @endforeach
+                            @endif
+
                         </tbody>
-
-
                         <tfoot>
                             <tr>
                                 <td colspan="5" class="clearfix">
@@ -133,7 +137,7 @@
                         </tfoot>
                     </table>
                 </div><!-- End .cart-table-container -->
-            </div><!-- End .col-lg-8 -->
+            </div>
 
             <div class="col-lg-4">
                 <div class="cart-summary">
@@ -214,7 +218,7 @@
                     </table>
 
                     <div class="checkout-methods">
-                        <a href="{{route('cart.checkout')}}" class="btn btn-block btn-dark">Proceed to Checkout
+                        <a href="{{ route('cart.checkout') }}" class="btn btn-block btn-dark">Proceed to Checkout
                             <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div><!-- End .cart-summary -->
