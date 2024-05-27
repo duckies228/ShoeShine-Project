@@ -17,7 +17,7 @@
                                             <div class="product-label label-sale">-20%</div>
                                         </div>
                                         <div class="btn-icon-group">
-                                            <a href="{{route('cart.index')}}" class="btn-icon "><i
+                                            <a href="" class="btn-icon "><i
                                                     class="icon-shopping-cart"></i></a>
                                                     
                                         </div>

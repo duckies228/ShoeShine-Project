@@ -16,12 +16,6 @@ public  function index(){
         'products',
     ));
 }
-public function cart(){
-    return view("frontend.cart.cart");
-}
-public function checkout(){
-    return view ("frontend.cart.checkout");
-}
 public function product($id){
 
     $product = Products::findOrFail($id);
@@ -42,10 +36,6 @@ public function blog(){
 public function contact(){
     return view("frontend.contact.contact");
 }
-// public function showCategory($categoryId) {
-//     $category = Category::findOrFail($categoryId);
-//     $productCount = $category->products()->count();
-//     return view('category', compact('category', 'productCount'));
-// }
+
 
 }

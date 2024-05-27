@@ -6,6 +6,7 @@ use App\Http\Controllers\backend\AuthController;
 use App\Http\Controllers\backend\DashboardController;
 use App\Http\Controllers\Customer\CustomerController;
 use App\Http\Controllers\Cart\CartController;
+use App\Http\Controllers\CartController as ControllersCartController;
 use App\Http\Middleware\AuthenticateMiddleware;
 use App\Http\Middleware\Loginmiddleware;
 use App\Http\Controllers\User\Usercontroller;
@@ -37,17 +38,11 @@ Route::prefix('user')->group(function () {
 //Customer
 Route::prefix('customer')->group(function () {
     Route::get('/', [CustomerController::class, 'index'])->name('home.index');
-    Route::get('/cart', [CustomerController::class, 'cart'])->name('cart.cart');
     Route::get('/products/{id}', [CustomerController::class, 'product'])->name('product.productsdetail');
-    Route::get('/checkout', [CustomerController::class, 'checkout'])->name('cart.checkout');
     Route::get('/shop', [CustomerController::class, 'shop'])->name('shop.shop');
     Route::get('/blog', [CustomerController::class, 'blog'])->name('blog.blog');
     Route::get('/contact', [CustomerController::class, 'contact'])->name('contact.contact');
-
+});
 //Cart
-Route::prefix('cart')->group(function () {
-    Route::get('/', [CartController::class, 'index'])->name('cart.index');
-    route::get('/add',[CartController::class ,'add'])->name('cart.add');
 
-});
-});
+
