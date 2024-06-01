@@ -6,10 +6,10 @@
                 <div class="row py-4">
                     @if (isset($products))
                         @foreach ($products as $product)
-                            <div class="col-6 col-sm-4 col-md-3 col-xl-2 appear-animate" >
+                            <div class="col-6 col-sm-4 col-md-3 col-xl-2 appear-animate">
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
-                                        <a href="{{ route('product.productsdetail', ['id' => $product->id]) }}">
+                                        <a href="{{ route('productsdetail.productsdetail', ['id' => $product->id]) }}">
                                             <img src="{{ $product->images }}"alt="">
                                         </a>
                                         <div class="label-group">
@@ -17,18 +17,16 @@
                                             <div class="product-label label-sale">-20%</div>
                                         </div>
                                         <div class="btn-icon-group">
-                                            <a href="" class="btn-icon "><i
-                                                    class="icon-shopping-cart"></i></a>
-                                                    
-                                        </div>
-                                        <a href="{{ route('product.productsdetail', ['id' => $product->id]) }}" class='btn-quickview bg-primary'>Xem Ngay</a>
-
-
+                                            <a href="" class="btn-icon btn-add-cart "><i class="icon-shopping-cart"></i></a>                                                 
+                                        </div>  
+                                        <a href="{{ route('productsdetail.productsdetail', ['id' => $product->id]) }}"
+                                            class='btn-quickview bg-primary'>Xem Ngay</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
                                             <div class="category-list">
-                                                <a href="#" class="product-category">{{$product->categories}}</a>
+                                                <a href="#"
+                                                    class="product-category">{{ $product->categories }}</a>
                                             </div>
                                         </div>
                                         <h3 class="product-title">
@@ -41,31 +39,22 @@
                                             </div>
                                         </div>
                                         <div class="price-box">
-                                            <span class="product-price">{{ $product->price ? number_format($product->price) . ' VNĐ' : '' }}</span>
-                                            </div>
+                                            <span
+                                                class="product-price">{{ $product->price ? number_format($product->price) . ' VNĐ' : '' }}</span>
+                                        </div>
                                     </div>
                                 </div>
-
                             </div>
-                   
                         @endforeach
                     @endif
-                    {{-- <div class="pagination">
-                        <a href="#">&laquo;</a>
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a href="#">&raquo;</a>
-                    </div> --}}
                     <div class="pagination">
                         {{ $products->links() }}
                     </div>
                 </div>
     </div>
     </section>
+    
     </main>
-    </div>
+   
     <a id="scroll-top" href="#top" title="Top" role="button"><i class="icon-angle-up"></i></a>
 </body>

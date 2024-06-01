@@ -38,11 +38,18 @@ Route::prefix('user')->group(function () {
 //Customer
 Route::prefix('customer')->group(function () {
     Route::get('/', [CustomerController::class, 'index'])->name('home.index');
-    Route::get('/products/{id}', [CustomerController::class, 'product'])->name('product.productsdetail');
-    Route::get('/shop', [CustomerController::class, 'shop'])->name('shop.shop');
+    Route::get('/products/{id}', [CustomerController::class, 'product'])->name('productsdetail.productsdetail');
+    Route::get('/products', [CustomerController::class, 'products'])->name('products.main');
     Route::get('/blog', [CustomerController::class, 'blog'])->name('blog.blog');
     Route::get('/contact', [CustomerController::class, 'contact'])->name('contact.contact');
 });
 //Cart
+Route::prefix('cart')->group(function () {
+    Route::get('/', [CartController::class, 'viewcart'])->name('view.cart');
+    Route::post('/add/{id}', [CartController::class, 'addtocart'])->name('addto.cart');
+
+
+});
+
 
 

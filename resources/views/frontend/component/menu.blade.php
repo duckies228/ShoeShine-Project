@@ -14,7 +14,7 @@
                             <a href="{{route('home.index')}}">TRANG CHỦ</a>
                         </li>
                         <li>
-                            <a href="{{route('shop.shop')}}">SẢN PHẨM</a>
+                            <a href="{{route('products.main')}}">SẢN PHẨM</a>
                             <div class="megamenu megamenu-fixed-width megamenu-3cols">
                                 <div class="row">
                                     <div class="col-lg-4">
@@ -101,12 +101,7 @@
                 <a href="wishlist.html" class="header-icon header-icon-wishlist" title="Wishlist"><i
                         class="icon-wishlist-2"></i></a>
                 <div class="dropdown cart-dropdown">
-                    {{-- <a href="{{ route('cart.cart') }}" class="dropdown-toggle  cart-toggle" role=""
-                        data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" data-display="static">
-                        <i class="icon-cart-thick"></i>
-                        <span class="cart-count badge-circle">3</span>
-                    </a> --}}
-                    <a href="" class="dropdown-toggle  cart-toggle" title="Wishlist"> <i
+                    <a href="{{route('view.cart')}}" class="dropdown-toggle  cart-toggle" title=""> <i
                             class="icon-cart-thick"></i>
                     </a>
                 </div>

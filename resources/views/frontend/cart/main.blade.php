@@ -1,11 +1,4 @@
-
 @include('frontend.CartComponent.head')
 @include('frontend.CartComponent.menu')
-@include('frontend.shop.main')
+@include('frontend.cart.cart')
 @include('frontend.component.footer')
-  
-
-     
-
-
- 

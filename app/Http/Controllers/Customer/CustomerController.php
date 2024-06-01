@@ -22,13 +22,13 @@ public function product($id){
     $refProducts = Products::limit(4)->get();
     // dd($product);
     return view(
-        'frontend.product.productsdetail', 
+        'frontend.productdetail.productsdetail', 
         compact('product', 'refProducts')
     );
 }
-public function shop(){
+public function products(){
     $products = Products::paginate(15);
-    return view("frontend.shop.shop", compact('products'));
+    return view("frontend.products.main", compact('products'));
 }
 public function blog(){
     return view("frontend.blog.blog");

@@ -49,7 +49,7 @@
                             <div class="col-6 col-sm-4 col-md-3 col-xl-5col">
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
-                                        <a href="demo3-product.html">
+                                        <a href="{{route('productsdetail.productsdetail', ['id' => $product->id])}}">
                                             <img src="{{ asset($product->images) }}" />
                                         </a>
                                         <div class="label-group">
@@ -57,11 +57,10 @@
                                             <div class="product-label label-sale">-20%</div>
                                         </div>
                                         <div class="btn-icon-group">
-                                            <a href="{{route('cart.index')}}" class="btn-icon btn-add-cart product-type-simple"><i
-                                                    class="icon-shopping-cart"></i></a>
-                                        </div>
-                                     
-                                            <a href="{{ route('product.productsdetail', ['id' => $product->id]) }}" class='btn-quickview'>Xem Ngay</a>
+                                            <a href="#" class="btn-icon btn-add-cart product-type-simple"><i class="icon-shopping-cart"></i></a>
+                                                  
+                                        </div>                                    
+                                            <a href="{{ route('productsdetail.productsdetail', ['id' => $product->id]) }}" class='btn-quickview'>Xem Ngay</a>
 
                                     </figure>
                                     <div class="product-details">

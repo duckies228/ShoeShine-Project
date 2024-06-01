@@ -6030,13 +6030,16 @@ label {
     margin-bottom: 3.5rem
 }
 
+.pagination-container {
+    display: flex;
+    justify-content: center; /* Căn giữa pagination */
+}
+
 .pagination {
-    flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    color: #706f6c;
-    font-size: 1.4rem;
-    font-weight: 600;
-    font-family: Poppins, sans-serif
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .page-item:not(:first-child) {
@@ -6047,11 +6050,10 @@ label {
     color: #706f6c;
     background-color: transparent;
     border-color: #000
-}
+    
+}   
 
-.page-item.disabled {
-    display: none
-}
+
 
 .page-link {
     border: 1px solid #ccc;
@@ -6059,8 +6061,7 @@ label {
     min-width: 2.2em;
     color: inherit;
     line-height: 2.1em;
-    text-align: center
-}
+ }
 
 .page-link:focus,
 .page-link:hover {
@@ -6076,7 +6077,7 @@ label {
 
 .page-link-btn,
 span.page-link {
-    border: 0
+    border: 0x
 }
 
 .layout-btn {
@@ -18396,29 +18397,4 @@ span.toggle {
         font-size: 1.1rem;
         right: 6%
     }
-}
-.pagination {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 10px;
-    margin-bottom: 40px;
-}
-.pagination li {
-    margin-right: 5px;
-}
-.pagination li a {
-    display: block;
-    padding: 5px 10px;
-    background-color: #f0f0f0;
-    text-decoration: none;
-    color: #333;
-    border-radius: 5px;
-}
-.pagination li a:hover {
-    background-color: #ccc;
-}
-.pagination .active a {
-    background-color: #666;
-    color: #fff;
 }
