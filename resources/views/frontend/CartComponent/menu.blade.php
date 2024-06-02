@@ -63,6 +63,9 @@
                                     <a href="{{ route('products.main') }}">SẢN PHẨM</a>
                               
                             @endif
+                            <li class="active">
+                                <a href="{{ route('products.main') }}">Sản Phẩm </a>
+                            </li>
                             <div class="megamenu megamenu-fixed-width megamenu-3cols">
                                 <div class="row">
                                     <div class="col-lg-4">

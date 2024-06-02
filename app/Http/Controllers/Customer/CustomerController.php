@@ -17,7 +17,6 @@ public  function index(){
     ));
 }
 public function product($id){
-
     $product = Products::findOrFail($id);
     $refProducts = Products::limit(4)->get();
     // dd($product);
@@ -28,7 +27,7 @@ public function product($id){
 }
 public function products(){
     $products = Products::paginate(15);
-    return view("frontend.products.main", compact('products'));
+    return view("frontend.products.products", compact('products'));
 }
 public function blog(){
     return view("frontend.blog.blog");
@@ -36,6 +35,4 @@ public function blog(){
 public function contact(){
     return view("frontend.contact.contact");
 }
-
-
 }

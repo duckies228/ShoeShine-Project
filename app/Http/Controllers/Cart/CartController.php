@@ -34,4 +34,26 @@ class CartController extends Controller
         $cart = session()->get('cart', []);
         return view('frontend.cart.main', compact('cart'));
     }
+    public function removeFromCart($id)
+    {
+        $cart = session()->get('cart', []);
+
+        if (isset($cart[$id])) {
+            unset($cart[$id]);
+            session()->put('cart', $cart);
+        }
+        
+        return redirect()->back()->with('success', 'Xóa khỏi giỏ hàng thành công!');
+    }
+    public function update(Request $request, $id)
+    {
+        $cart = session()->get('cart', []);
+
+        if (isset($cart[$id])) {
+            $cart[$id]['quantity'] = $request->input('quantity');
+            session()->put('cart', $cart);
+        }
+
+        return redirect()->back()->with('success', 'Cập Nhật Thành Công');
+    }
 }

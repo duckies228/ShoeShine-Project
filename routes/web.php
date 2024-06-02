@@ -47,6 +47,11 @@ Route::prefix('customer')->group(function () {
 Route::prefix('cart')->group(function () {
     Route::get('/', [CartController::class, 'viewcart'])->name('view.cart');
     Route::post('/add/{id}', [CartController::class, 'addtocart'])->name('addto.cart');
+    Route::delete('/remove/{id}', [CartController::class, 'removeFromCart']);
+    Route::delete('/cart/update/{id}', [CartController::class, 'update'])->name('cart.update');;
+
+ 
+
 
 
 });

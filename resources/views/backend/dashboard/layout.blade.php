@@ -4,7 +4,6 @@
 <head>
     @include('backend/dashboard/component/header')
 </head>
-
 <body>
     @include('backend.dashboard.component.sidebar')
     <div id="wrapper">

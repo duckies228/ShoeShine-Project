@@ -16,11 +16,12 @@
                                             <div class="product-label label-hot">HOT</div>
                                             <div class="product-label label-sale">-20%</div>
                                         </div>
-                                        <div class="btn-icon-group">
-                                            <a href="" class="btn-icon btn-add-cart "><i class="icon-shopping-cart"></i></a>                                                 
-                                        </div>  
-                                        <a href="{{ route('productsdetail.productsdetail', ['id' => $product->id]) }}"
-                                            class='btn-quickview bg-primary'>Xem Ngay</a>
+                                        <form method="POST" action="{{ url('/cart/add/' . $product->id) }}">
+                                            @csrf
+                                            <button class=" btn-quickview bg-primary " type="submit" title="Add to Cart">Mua
+                                                Ngay</a>
+                                            </button>
+                                        </form>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
@@ -53,8 +54,8 @@
                 </div>
     </div>
     </section>
-    
+
     </main>
-   
+
     <a id="scroll-top" href="#top" title="Top" role="button"><i class="icon-angle-up"></i></a>
 </body>

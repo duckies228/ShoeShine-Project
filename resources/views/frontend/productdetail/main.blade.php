@@ -92,7 +92,6 @@
                                 <!---->
                             </div> <!-- color-->
                             <div class="product-action">
-                                @csrf
                                 <div class="product-single-qty">
                                     <input class="horizontal-quantity form-control" type="text">
                                 </div>
